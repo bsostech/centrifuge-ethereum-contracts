@@ -1,10 +1,10 @@
 pragma solidity ^0.5.3;
 
-import "zos-lib/contracts/Initializable.sol";
-import "contracts/Identity.sol";
+// import "zos-lib/contracts/Initializable.sol";
+import "./Identity.sol";
 
 
-contract IdentityFactory is Initializable {
+contract IdentityFactory  {
 
   event IdentityCreated(address indexed identity);
 
@@ -43,6 +43,7 @@ contract IdentityFactory is Initializable {
     Identity identity_ = new Identity(manager, keys, purposes);
     address identityAddr_ = address(identity_);
     _identities[identityAddr_] = true;
+    _identities[manager] = true; // BSOS: for nft.sol checking
     emit IdentityCreated(address(identityAddr_));
   }
 

@@ -1,11 +1,11 @@
 pragma solidity ^0.5.3;
 
-import "zos-lib/contracts/Initializable.sol";
-import "contracts/lib/MerkleProof.sol";
-import "contracts/Identity.sol";
+// import "zos-lib/contracts/Initializable.sol";
+import "./lib/MerkleProof.sol";
+import "./Identity.sol";
 
 
-contract AnchorRepository is Initializable {
+contract AnchorRepository {
 
   event AnchorCommitted(
     address indexed from,

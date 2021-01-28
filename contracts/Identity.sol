@@ -1,8 +1,8 @@
 pragma solidity ^0.5.3;
 
-import "zos-lib/contracts/Initializable.sol";
-import "contracts/KeyManager.sol";
-import "openzeppelin-eth/contracts/cryptography/ECDSA.sol";
+// import "zos-lib/contracts/Initializable.sol";
+import "../contracts/KeyManager.sol";
+import "../../privacy-enabled-erc721/src/openzeppelin-solidity/cryptography/ECDSA.sol";
 
 
 contract Identity is KeyManager {
